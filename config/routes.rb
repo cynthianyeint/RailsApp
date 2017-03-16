@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
-  root 'application#hello'
+
+  resources :users
+  root 'users#index'
+  #root 'application#hello'
   #root 'application#goodbye'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
