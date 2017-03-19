@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/home'
+
+  get 'static_pages/help'
+
   resources :microposts
   resources :users
   root 'users#index'
@@ -7,6 +11,7 @@ Rails.application.routes.draw do
   #root 'application#goodbye'
 
   get"/rails" => "application#hello"
+  get"/home" => "static_pages#home"
 
 
   # The priority is based upon order of creation: first created -> highest priority.
